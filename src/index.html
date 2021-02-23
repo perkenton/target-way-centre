@@ -6,13 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Target way centre</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
-  <link rel="icon" href="./images/favicon.ico">
+  <link rel="icon" href="<%=require('./images/favicon.ico').default%>">
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
 </head>
 <body>
 
 <div class="root" id="root">
-  <h1 class="header__title">Hello</h1>
+  <div class="header">
+
+    <div class="contacts">
+      <div class="contacts__wrapper">
+        <div class="contacts__block">
+          <img src="<%=require('./images/icon-phone.svg').default%>" alt="" class="contacts__icon">
+          <a href="tel: +375173683234" class="contacts__link">+375-17-368-32-34</a>
+          <span class="contacts__text">|</span>
+          <img src="<%=require('./images/icon-email.svg').default%>" alt="" class="contacts__icon">
+          <a href="mailto: exportwaygroup@gmail.com" class="contacts__link">exportwaygroup@gmail.com</a>
+        </div>
+        <div class="contacts__button-block">
+          <span class="contacts__text">У вас есть вопросы?</span>
+          <a href="#feedback" class="contacts__button">Помогите нам стать лучше</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Main">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">О нас</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Услуги</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Портфолио</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Новости</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 
 </body>
