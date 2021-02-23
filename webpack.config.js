@@ -10,6 +10,7 @@ module.exports = {
   entry: { 
     index: './src/scripts/index.js',
     // about: './src/scripts/about.js',
+    // analytics: './src/scripts/analytics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -39,6 +40,18 @@ module.exports = {
           },
           'postcss-loader',
         ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            }
+          },
+          'postcss-loader',
+          "sass-loader"]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
@@ -97,6 +110,12 @@ module.exports = {
     //   template: './src/about.html',
     //   chunks: ['about'],
     //   filename: 'about.html'
+    // }),
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   template: './src/analytics.html',
+    //   chunks: ['analytics'],
+    //   filename: 'analytics.html'
     // }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

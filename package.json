@@ -1,7 +1,7 @@
 {
-  "name": "news-analyzer-diplom",
+  "name": "target-way-centre",
   "version": "0.0.1",
-  "description": "Diplom project",
+  "description": "Target way centre",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perkenton/news-analyzer-diplom.git"
+    "url": "git+https://github.com/perkenton/target-way-centre.git"
   },
   "author": "Aleksandr Vasiliev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/perkenton/news-analyzer-diplom/issues"
+    "url": "https://github.com/perkenton/target-way-centre/issues"
   },
-  "homepage": "https://perkenton.github.io/news-analyzer-diplom/",
+  "homepage": "https://perkenton.github.io/target-way-centre/",
   "devDependencies": {
     "@babel/cli": "7.10.4",
     "@babel/core": "7.10.4",
@@ -35,6 +35,9 @@
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "postcss-loader": "3.0.0",
+    "postcss-svg": "3.0.0",
+    "sass": "1.32.8",
+    "sass-loader": "10.1.1",
     "style-loader": "1.2.1",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12",
@@ -44,6 +47,8 @@
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "core-js": "3.4.1",
-    "swiper": "^6.1.1"
+    "swiper": "6.4.15",
+    "postcss-inline-svg": "5.0.0",
+    "postcss-normalize": "9.0.0"
   }
 }
