@@ -3,6 +3,7 @@
   background-color: #3a526a;
 
   &__wrapper {
+    max-width: 1280px;
     width: calc(100% - 64px);
 
     display: flex;
@@ -15,23 +16,27 @@
     padding-right: 0;
     margin: 0 auto;
   }
+
   &__block {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
+
   &__icon {
     width: 14px;
     margin-right: 8px;
   }
+
   &__link {
-    font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     text-decoration: none;
     color: #fff;
+    white-space: nowrap;
 
     transition: .3s linear;
 
@@ -39,11 +44,12 @@
       opacity: .8;
     }
     &:focus {
-
+      outline: 1px dotted #17ba5f;
     }
   }
+
   &__text {
-    font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -53,17 +59,20 @@
 
     margin: 0 16px;
   }
+
   &__button-block {
 
   }
+
   &__button {
-    font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: "OpenSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
     color: #fff;
+    white-space: nowrap;
 
     background-color: #17ba5f;
 
@@ -78,7 +87,77 @@
       background-color: #169f53;
     }
     &:focus {
+      outline: 1px dotted #17ba5f;
+    }
+  }
+}
 
+@media (max-width: 940px) {
+  .contacts {
+
+    &__link {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__button {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+
+    &__wrapper {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .contacts {
+
+    &__button-block {
+      margin-top: 12px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .contacts {
+
+    &__wrapper {
+      width: calc(100% - 24px);
+    }
+
+    &__block {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__button-block {
+      text-align: center;
+    }
+
+    &__button {
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .contacts {
+
+    &__block {
+      flex-wrap: wrap;
     }
   }
 }
