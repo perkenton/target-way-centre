@@ -10,7 +10,6 @@ module.exports = {
   entry: { 
     index: './src/scripts/index.js',
     // about: './src/scripts/about.js',
-    // analytics: './src/scripts/analytics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -29,7 +28,7 @@ module.exports = {
           isDev ? 'style-loader' : {
             loader: MiniCssExtractPlugin.loader,
             options: {
-            publicPath: '../',
+              publicPath: '../',
             },
           },
           {
@@ -51,7 +50,7 @@ module.exports = {
             }
           },
           'postcss-loader',
-          "sass-loader"]
+          'sass-loader']
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
@@ -89,7 +88,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: './[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -110,12 +109,6 @@ module.exports = {
     //   template: './src/about.html',
     //   chunks: ['about'],
     //   filename: 'about.html'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   inject: false,
-    //   template: './src/analytics.html',
-    //   chunks: ['analytics'],
-    //   filename: 'analytics.html'
     // }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
