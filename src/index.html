@@ -12,27 +12,40 @@
 <body>
 
 <div class="root" id="root">
-  <div class="header">
+  <header class="header">
 
     <div class="contacts">
       <div class="contacts__wrapper">
+
         <div class="contacts__block">
-          <img src="<%=require('./images/icon-phone.svg').default%>" alt="" class="contacts__icon">
-          <a href="tel: +375173683234" class="contacts__link">+375-17-368-32-34</a>
+          <a href="tel: +375173683234" class="contacts__link">
+            <img src="<%=require('./images/icon-phone.svg').default%>" alt="Иконка телефона" class="contacts__icon">
+            +375-17-368-32-34
+          </a>
+
           <span class="contacts__text">|</span>
-          <img src="<%=require('./images/icon-email.svg').default%>" alt="" class="contacts__icon">
-          <a href="mailto: exportwaygroup@gmail.com" class="contacts__link">exportwaygroup@gmail.com</a>
+
+          <a href="mailto: exportwaygroup@gmail.com" class="contacts__link">
+            <img src="<%=require('./images/icon-email.svg').default%>" alt="Иконка письма" class="contacts__icon">
+            exportwaygroup@gmail.com
+          </a>
         </div>
+
         <div class="contacts__button-block">
           <span class="contacts__text">У вас есть вопросы?</span>
           <a href="#feedback" class="contacts__button">Помогите нам стать лучше</a>
         </div>
+
       </div>
     </div>
 
     <nav class="main-nav" aria-label="Main">
       <div class="main-nav__wrapper">
         <img src="<%=require('./images/logo.png').default%>" alt="Логотип" class="main-nav__logo">
+
+        <input type="checkbox" id="checkbox" class="main-nav__mobile-menu-checkbox">
+        <label for="checkbox" class="main-nav__mobile-menu-button"><span class="main-nav__mobile-menu-icon"></span></label>
+
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Главная</a>
@@ -55,7 +68,39 @@
         </ul>
       </div>
     </nav>
-  </div>
+  </header>
+
+  <section class="banner">
+    <div class="banner__wrapper">
+
+      <h1 class="banner__title">Хотите вывести свой бизнес на&nbsp;новый уровень развития?</h1>
+      <p class="banner__subtitle">У&nbsp;нас есть решение для предпринимателей всего мира из&nbsp;разных отраслей промышленности.</p>
+
+      <div class="banner__cards">
+
+        <div class="banner__card">
+          <p class="banner__card-text">групповые антикризисные тренинги</p>
+        </div>
+
+        <div class="banner__card">
+          <p class="banner__card-text">бизнес-встречи в&nbsp;непринужденной обстановке</p>
+        </div>
+
+        <div class="banner__card">
+          <p class="banner__card-text">тренинги в&nbsp;организациях</p>
+        </div>
+
+        <div class="banner__card">
+          <p class="banner__card-text">выездные бизнес-миссии</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section style="height: 200px; background-color: grey;"></section>
+
 </div>
 
 </body>
